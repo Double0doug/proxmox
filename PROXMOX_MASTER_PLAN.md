@@ -48,7 +48,8 @@ Future agents should use the following goals to guide research and implementatio
 
 ### 3.2 Network Services & Storage Integration
 - **NFS Server:** Configure the Proxmox host to export `/mnt/pve/mass-storage` via NFS.
-- **Satellite Integration:** Integrate Raspberry Pi nodes (e.g., `home-assistant-pi`) by mounting the host's NFS shares for centralized backups and HA data storage.
+- **Satellite Integration:** Integrate Raspberry Pi nodes (e.g., `home-assistant-pi`) by mounting the host's NFS shares.
+- **Centralized Management:** Connect VM 101 to the Raspberry Pi 5 Portainer instance via the **Portainer Agent** (Port 9001).
 - **Proxmox MCP Server (SSE):** Deploy a Dockerized Model Context Protocol server on VM 101 to expose real-time host/VM telemetry to future agents.
   - *Context:* Implementation files located in `docker-mcp-setup/`.
 
