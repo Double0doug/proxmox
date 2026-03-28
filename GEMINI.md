@@ -24,3 +24,11 @@ This file contains foundational mandates for all Gemini CLI agents interacting w
   2. A `docker-compose.yml`.
   3. A `README.md` with deployment and troubleshooting steps.
 - **MCP Server:** Use the tools provided by the Proxmox MCP server (defined in `docker-mcp-setup/`) for real-time telemetry once deployed.
+
+## 5. Git & Commit Policy
+- **No Automatic Commits:** Never `git commit` or `git push` unless specifically and explicitly instructed by the user for the current task.
+- **Explicit Instruction:** Even if a task is "finished," do not assume a commit is required. Wait for a directive such as "Commit the changes" or "Push to GitHub."
+- **Branch Strategy:** 
+  - Never commit directly to the `main` branch. 
+  - All changes must be made on a feature or appropriately designated branch (e.g., `feature/`, `fix/`, `docs/`, `infra/`).
+  - Merging into `main` should only occur after the task is fully validated and upon explicit user request.
