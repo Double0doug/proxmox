@@ -26,9 +26,11 @@ This file contains foundational mandates for all Gemini CLI agents interacting w
 - **MCP Server:** Use the tools provided by the Proxmox MCP server (defined in `docker-mcp-setup/`) for real-time telemetry once deployed.
 
 ## 5. Git & Commit Policy
-- **No Automatic Commits:** Never `git commit` or `git push` unless specifically and explicitly instructed by the user for the current task.
-- **Explicit Instruction:** Even if a task is "finished," do not assume a commit is required. Wait for a directive such as "Commit the changes" or "Push to GitHub."
+- **No Automatic Commits:** NEVER `git commit` or `git push` to ANY branch (including feature branches) without explicit, specific permission for that exact action.
+- **Permission Protocol:** You may suggest or ask to commit ("Should I commit these changes to the feature branch?"), but you must wait for a clear "Yes" or directive before executing.
 - **Branch Strategy:** 
   - Never commit directly to the `main` branch. 
   - All changes must be made on a feature or appropriately designated branch (e.g., `feature/`, `fix/`, `docs/`, `infra/`).
+  - **Sync Protocol:** Always ensure the local `main` branch is up-to-date (`git pull origin main`) before branching for a new task.
+  - **Remote Cleanup:** If a branch has been merged and deleted from the remote, create a new local branch for subsequent work rather than continuing on the stale local branch.
   - Merging into `main` should only occur after the task is fully validated and upon explicit user request.
