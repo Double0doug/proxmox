@@ -43,7 +43,7 @@ Future agents should use the following goals to guide research and implementatio
 
 ### 3.1 Containerized Workloads
 - **Minecraft Server:** Deploy `itzg/minecraft-server` via Docker Compose on VM 101.
-  - *Context:* Data must persist on the 1TB HDD mount point.
+  - *Context:* Configuration located in `minecraft-server/`. Data must persist on the 1TB HDD mount point (`/mnt/data/minecraft`).
 - **IOT Build Server:** Deploy an ESP32/ESP-IDF build environment to support sensor node development.
 
 ### 3.2 Network Services & Storage Integration
@@ -64,7 +64,7 @@ Future agents should use the following goals to guide research and implementatio
 - `lab_inventory.json`: Machine-readable metadata for IPs and satellite nodes.
 - `post_install.sh`: Historical record of host-level optimizations.
 - `vm_provisioning_history.sh`: `qm` command history for VM creation.
-- `minecraft_compose_draft.sh`: Draft configuration for the first Docker workload.
+- `minecraft-server/`: Docker Compose and deployment guide for the Minecraft workload.
 
 ### Operating Principles
 1. **Stability First:** All host changes must respect the Ryzen 5700G's specific microcode and governor requirements.
