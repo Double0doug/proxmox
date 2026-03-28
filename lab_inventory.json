@@ -1,0 +1,36 @@
+{
+  "server": {
+    "hostname": "pve",
+    "ip": "192.168.1.50",
+    "os": "Proxmox VE 9.1.1",
+    "hardware": {
+      "cpu": "Ryzen 7 5700G",
+      "ram_gb": 64,
+      "storage": {
+        "nvme": { "device": "/dev/nvme0n1", "label": "local-lvm", "size": "1.8TB" },
+        "hdd": { "device": "/dev/sda", "label": "mass-storage", "mount": "/mnt/pve/mass-storage", "size": "4TB" }
+      }
+    }
+  },
+  "virtual_machines": [
+    {
+      "id": 101,
+      "name": "docker-host",
+      "os": "Ubuntu Server 24.04.1 LTS",
+      "resources": { "cpu_cores": 8, "ram_gb": 16 },
+      "storage": {
+        "os_disk_gb": 128,
+        "data_disk_gb": 1024
+      },
+      "status": "Installed (SSH Ready)"
+    }
+  ],
+  "satellites": [
+    { "name": "home-assistant-pi", "model": "RPi 4", "ip": "192.168.1.x", "purpose": "Home Automation" },
+    { "name": "esp32-dev-01", "platform": "ESP32", "purpose": "Sensor Node" }
+  ],
+  "local_paths": {
+    "git_repo": "C:\\Users\\doug\\git\\proxmox",
+    "documentation": "PROXMOX_MASTER_PLAN.md"
+  }
+}
