@@ -1,0 +1,10 @@
+services:
+  pulse:
+    image: rcourtman/pulse:latest
+    container_name: pulse
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./config.yaml:/app/config.yaml
+    # Note: Pulse requires a config.yaml to define what it is monitoring.

@@ -54,7 +54,9 @@ Future agents should use the following goals to guide research and implementatio
   - *Context:* Implementation files located in `docker-mcp-setup/`.
 
 ### 3.3 Infrastructure Maturity (Future Research)
-- **Monitoring:** Implement Prometheus/Grafana (LXC or Docker) for host and VM telemetry.
+- **Pulse Monitoring:** Deploy `rcourtman/pulse` on Raspberry Pi 5 to monitor Proxmox host and VM 101 from an external node.
+  - *Context:* Configuration located in `pulse-monitoring/`.
+- **Monitoring (Advanced):** Implement Prometheus/Grafana (LXC or Docker) for host and VM telemetry.
 - **Automation:** Transition from manual `qm` commands to IaC (Terraform/OpenTofu and Ansible) for environment reproducibility.
 
 ---
