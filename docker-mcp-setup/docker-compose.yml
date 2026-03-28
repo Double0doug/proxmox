@@ -1,0 +1,13 @@
+services:
+  proxmox-mcp:
+    build: .
+    container_name: proxmox-mcp
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - PVE_HOST=192.168.1.50
+      - PVE_USER=root@pam
+      - PVE_TOKEN_ID=MCP-Agent
+      - PVE_TOKEN_SECRET=${PVE_TOKEN_SECRET}
+    # Note: Ensure you have a .env file or export PVE_TOKEN_SECRET before running

@@ -1,0 +1,5 @@
+mcp[sse]
+proxmoxer
+requests
+uvicorn
+python-dotenv

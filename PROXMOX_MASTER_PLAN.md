@@ -49,6 +49,8 @@ Future agents should use the following goals to guide research and implementatio
 ### 3.2 Network Services & Storage Integration
 - **NFS Server:** Configure the Proxmox host to export `/mnt/pve/mass-storage` via NFS.
 - **Satellite Integration:** Integrate Raspberry Pi nodes (e.g., `home-assistant-pi`) by mounting the host's NFS shares for centralized backups and HA data storage.
+- **Proxmox MCP Server (SSE):** Deploy a Dockerized Model Context Protocol server on VM 101 to expose real-time host/VM telemetry to future agents.
+  - *Context:* Implementation files located in `docker-mcp-setup/`.
 
 ### 3.3 Infrastructure Maturity (Future Research)
 - **Monitoring:** Implement Prometheus/Grafana (LXC or Docker) for host and VM telemetry.
