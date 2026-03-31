@@ -44,6 +44,8 @@ Future agents should use the following goals to guide research and implementatio
 ### 3.1 Containerized Workloads
 - **Minecraft Server:** Deploy `itzg/minecraft-server` via Docker Compose on VM 101.
   - *Context:* Configuration located in `minecraft-server/`. Data must persist on the 1TB HDD mount point (`/mnt/data/minecraft`).
+- **Local LLM (Ollama & Open WebUI):** Deploy a private inference engine for homelab maintenance.
+  - *Context:* Configuration located in `local-llm/`. Persistent data (models/DB) must live on the 1TB HDD mount point (`/mnt/data/`).
 - **IOT Build Server:** Deploy an ESP32/ESP-IDF build environment to support sensor node development.
 
 ### 3.2 Network Services & Storage Integration
@@ -61,7 +63,12 @@ Future agents should use the following goals to guide research and implementatio
 
 ---
 
-## 4. Context for Future Agents
+---
+
+## 5. Pending Tasks & Maintenance
+- [ ] **Hostname Alignment:** Rename RPi 5 node from `homelab` to `rpi5-satellite` for consistency with `lab_inventory.json`.
+
+## 6. Context for Future Agents
 
 ### Key Files & Locations
 - `lab_inventory.json`: Machine-readable metadata for IPs and satellite nodes.
