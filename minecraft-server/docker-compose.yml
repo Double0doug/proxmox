@@ -11,4 +11,4 @@ services:
       VERSION: "LATEST"
     volumes:
       - /mnt/data/minecraft:/data
-    restart: unless-stopped
+    restart: "no"

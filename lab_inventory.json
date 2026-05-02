@@ -15,7 +15,7 @@
   "virtual_machines": [
     {
       "id": 101,
-      "name": "docker-host",
+      "name": "Big-Lab-01-Docker",
       "ip": "192.168.1.40",
       "os": "Ubuntu Server 24.04.1 LTS",
       "resources": { "cpu_cores": 8, "ram_gb": 16 },
@@ -27,7 +27,8 @@
     }
   ],
   "satellites": [
-    { "name": "home-assistant-pi", "model": "RPi 4", "ip": "192.168.1.x", "purpose": "Home Automation" },
+    { "name": "home-assistant-pi", "model": "RPi 4", "ip": "192.168.1.27", "mac": "DC:A6:32:54:A7:84", "purpose": "Home Automation Master Node" },
+    { "name": "rpi5-satellite", "model": "RPi 5", "ip": "192.168.1.35", "mac": "2c:cf:67:c6:86:7f", "purpose": "Portainer Master & Voice Satellite", "portainer_url": "http://192.168.1.35:9000" },
     { "name": "esp32-dev-01", "platform": "ESP32", "purpose": "Sensor Node" }
   ],
   "local_paths": {
